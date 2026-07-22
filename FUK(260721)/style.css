@@ -1,0 +1,573 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #eeeeee;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+
+/* =========================
+   Layout
+========================= */
+
+.home {
+    width: 402px;
+    height: 874px;
+    position: relative;
+    overflow: hidden;
+
+    background: black;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    right: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.transport-total {
+
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+
+    color: #8F969C;
+
+}
+
+.title {
+    font-size: 32px;
+    font-weight:400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #FDFDFD;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    padding-top: 4px;
+}
+
+.icon-btn {
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+
+/* =========================
+   Date Navigation
+========================= */
+
+.date-nav {
+    position: absolute;
+    top: 172px;
+    left: 12px;
+
+    display: flex;
+}
+
+.date-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    padding: 0 20px;
+
+    border: none;
+    background: transparent;
+}
+
+.day1 {
+    padding-left: 18px;
+}
+
+.date-item.active {
+    padding: 8px 20px;
+    background: #E95A55;
+    border-radius: 16px;
+}
+
+.date-item.active .day {
+    color: #fff;
+}
+
+.day {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #C0C4C7;
+}
+
+.week {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #8F969C;
+}
+
+
+/* =========================
+   Schedule Container
+========================= */
+
+.schedule-container {
+    position: absolute;
+    top: 210px;
+    left: 0;
+    right: 0;
+
+    height: 700px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px 12px 100px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        black 30px
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        black 30px
+    );
+}
+
+
+/* =========================
+   Schedule Card
+========================= */
+
+.schedule-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px;
+
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+.time {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #1F1F1F;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #1F1F1F;
+}
+
+.hours {
+    margin-left: 24px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #1F1F1F;
+}
+
+.description {
+    display: none;
+
+    margin-left: 24px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.04em;
+    color: #8F969C;
+}
+
+.description.show {
+    display: block;
+}
+
+
+/* =========================
+   Detail Button
+========================= */
+
+.detail-btn {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+
+    transition: transform .2s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   Move Card
+========================= */
+
+.move-card {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+.move-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.move-type {
+    font-size: 12px;
+    font-weight: 600;
+    color: #E95A55;
+}
+
+.move-time {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1F1F1F;
+}
+
+.move-line {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8F969C;
+}
+
+.move-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1F1F1F;
+}
+
+.boarding {
+    width: 402px;
+    height: 874px;
+    position: relative;
+    overflow: hidden;
+
+    background: #000000;   
+}
+
+.boarding-header {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    right: 30px;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.boarding-title {
+    font-size: 32px;
+    font-weight:400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #FDFDFD;
+}
+
+.backBtn {
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.boarding-container{
+    position:absolute;
+    top: 120px;
+    left: 0px;
+    right:0px;
+
+    display:flex;
+    flex-direction:column;
+
+    padding: 20px 12px 100px;
+
+    gap:12px;
+}
+
+.boarding-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px 20px 40px 20px;
+
+    background: white;
+    border-radius: 16px;
+}
+
+.ticket-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.airline{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.airline-name{
+    font-size:14px;
+    font-weight:400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#1F1F1F;
+}
+
+.flight-number{
+    font-size:14px;
+    font-weight:400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#8F969C;
+}
+
+.flight-date{
+    font-size:14px;
+    font-weight:400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#1F1F1F;
+}
+
+.divider{
+    margin-top:8px;
+
+    width:100%;
+    height:1px;
+
+    background:#E6E6E6;
+}
+
+.route{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:12px;
+}
+
+.departure,
+.arrival{
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.arrival{
+    text-align:right;
+}
+
+.city{
+    font-size:14px;
+    font-weight:500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#8F969C;
+}
+
+.airport{
+    font-size:52px;
+    font-weight:600;
+    line-height:1;
+    color:#1F1F1F;
+}
+
+.flight-time{
+    font-size:14px;
+    font-weight:500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color:#1F1F1F;
+}
+
+.plane {
+    width:52px;
+    height:52px;
+}
+
+.dimmer {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background: rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display:none;
+
+    z-index:5;
+}
+
+
+.dimmer.show {
+    display:block;
+}
+
+.search-box {
+
+    position:absolute;
+
+    top:145px;
+    left:12px;
+    right:12px;
+
+    display:none;
+
+    z-index:10;
+}
+
+
+.search-box.show {
+    display:block;
+}
+
+
+.search-box input {
+
+    width:100%;
+    height:44px;
+
+    padding:0 16px;
+
+    border:none;
+    border-radius:14px;
+
+    background:#ffffff;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+
+
+.search-result {
+
+    position:absolute;
+
+    top:200px;
+    left:12px;
+    right:12px;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    display:none;
+
+    z-index:10;
+}
+
+
+.search-result.show {
+    display:block;
+}
+
+
+.search-item {
+
+    padding:16px;
+
+    font-size:14px;
+
+    border-bottom:1px solid #eeeeee;
+
+}

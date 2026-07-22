@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fukuoka</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div class="home">
+    <div class="header">
+        <div class="title-area">
+            <div class="title">
+                FUKUOKA
+            </div>
+            <div class="transport-total" id="transportTotal">
+
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="icon-btn" id="flightBtn">
+                <img src="images/flight.svg" alt="">
+            </button>
+            <button class="icon-btn" id="searchBtn">
+                <img src="images/search.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="date-nav">
+
+        <button class="date-item day1" data-day="24" data-week="Fri">
+            <span class="day">24</span>
+            <span class="week">Fri</span>
+        </button>
+
+        <button class="date-item" data-day="25" data-week="Sat">
+            <span class="day">25</span>
+            <span class="week">Sat</span>
+        </button>
+
+        <button class="date-item" data-day="26" data-week="Sun">
+            <span class="day">26</span>
+            <span class="week">Sun</span>
+        </button>
+
+        <button class="date-item" data-day="27" data-week="Mon">
+            <span class="day">27</span>
+            <span class="week">Mon</span>
+        </button>
+    </div>
+
+    <div class="schedule-container" id="scheduleContainer"> 
+    </div>
+    <div class="schedule-fade"></div>
+
+    <div class="dimmer" id="dimmer"></div>
+
+    <div class="search-box" id="searchBox">
+        <input 
+        type="text" 
+        id="searchInput"
+        placeholder="장소 검색"
+        >
+    </div>
+    <div class="search-result" id="searchResult">
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
